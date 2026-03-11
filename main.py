@@ -154,9 +154,9 @@ model = genai.GenerativeModel(
     system_instruction="You are a helpful assistant.",
     generation_config={
         "temperature": 1.0,
-        "top_p": 2,
-        "top_k": 50,
-        "max_output_tokens": 3048,
+        "top_p": 1,
+        "top_k": 40,
+        "max_output_tokens": 2048,
     },
 )
 
