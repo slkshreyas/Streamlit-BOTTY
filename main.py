@@ -92,7 +92,7 @@ USERS = load_users_from_secrets_or_env()
 # 2) Login screen (blocks until authenticated)
 # -------------------------------
 def login_view():
-    st.title("BOTTY")
+    st.title("BOTTY🤖")
     st.subheader("Sign in")
     with st.form("login_form", clear_on_submit=False):
         col1, col2 = st.columns(2)
@@ -131,7 +131,7 @@ hist_key, chat_key = ensure_user_session_keys(username)
 # -------------------------------
 # 3) Post-login: check API key
 # -------------------------------
-st.title("BOTTY")
+st.title("BOTTY 🤖")
 st.caption(f"Signed in as **{username}**")
 
 if not GOOGLE_API_KEY:
@@ -154,9 +154,9 @@ model = genai.GenerativeModel(
     system_instruction="You are a helpful assistant.",
     generation_config={
         "temperature": 1.0,
-        "top_p": 1,
-        "top_k": 40,
-        "max_output_tokens": 2048,
+        "top_p": 2,
+        "top_k": 50,
+        "max_output_tokens": 3048,
     },
 )
 
